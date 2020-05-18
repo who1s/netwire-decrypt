@@ -37,7 +37,7 @@ def get_arguments():
     return args
 
 def decrypt_character(byte):
-    result = chr(int(hex((int(byte.hex(),16) - 0x24^0x9D)&0xFF), 16))
+    result = chr((int(byte.hex(),16) - 0x24^0x9D)&0xFF)
     return result
 
 def main():
